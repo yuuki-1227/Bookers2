@@ -14,3 +14,36 @@
  *= require_self
  */
 @import "bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  background-color: grey;
+}
+
+header > h2 {
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+li {
+  margin: 10px;
+}
+
+footer > h6 {
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
