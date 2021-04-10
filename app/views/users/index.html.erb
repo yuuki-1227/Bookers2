@@ -1,4 +1,7 @@
-<div class = "left-sideber">
+<div class = "container">
+  <div class = "row">
+
+<div class = "col-lg-4">
   <div class = "User-information">
     <h3>User Info</h3>
     <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
@@ -22,10 +25,10 @@
   </div>
 </div>
 
-<div class = "right-sideber">
+<div class = "col-lg-8">
   <div class = "books-index">
     <h3>Users</h3>
-    <table>
+    <table class = "table table-striped">
       <thead>
         <tr>
           <th>image</th>
@@ -45,5 +48,7 @@
       <% end %>
       </tbody>
     </table>
+  </div>
+</div>
   </div>
 </div>
