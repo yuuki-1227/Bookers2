@@ -1,0 +1,49 @@
+<div class = "left-sideber">
+  <div class = "User-information">
+    <h3>User Info</h3>
+    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+    <p>name</p>
+    <p>introduction</p>
+    <%= link_to "edit_profile", edit_user_registration_path %>
+  </div>
+  <div class = "New-book">
+    <h3>New book</h3>
+    <%= form_with model:@book, local:true do |f| %>
+    <div class = "new-book-title">
+      <label for = "book_title">Title</label>
+      <%= f.text_field :title %>
+    </div>
+    <div class = "new-book-body">
+      <label for = "book_body">Opinion</label>
+      <%= f.text_area :body %>
+    </div>
+    <div class = "action"><%= f.submit 'Create Book' %></div>
+    <% end %>
+  </div>
+</div>
+
+<div class = "right-sideber">
+  <div class = "books-index">
+    <h3>Users</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>image</th>
+          <th>name</th>
+          <th></th>
+          <th colspan = "3"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= image_tag('sample-author1.jpg') %><td>
+          <td><%= user.name %></td>
+          <td></td>
+          <td><%= link_to 'Show', 'book_path(user)' %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
