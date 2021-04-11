@@ -16,7 +16,8 @@
         <% end %>
 
         <div class = "field">
-          <%= f.submit 'ファイルを選択' %><span>画像が選択されていません</span>
+          <%= f.label :profile_image_id %>
+          <%= f.file_field :profile_image_id, id: :profile_image_id %>
         </div>
 
         <div class = "field">

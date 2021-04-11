@@ -6,8 +6,9 @@ class User < ApplicationRecord
 
   has_many :books, dependent: :destroy
 
+
   def books
     return Book.where(user_id: self.id)
   end
-  
+
 end
