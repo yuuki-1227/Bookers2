@@ -11,13 +11,9 @@
           <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
         </div>
 
-        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-        <% end %>
-
         <div class = "field">
-          <%= f.label :profile_image_id %>
-          <%= f.file_field :profile_image_id, id: :profile_image_id %>
+          <%= f.label :profile_image %>
+          <%=  profile_image_id.attachment_field :profile_image %>
         </div>
 
         <div class = "field">
