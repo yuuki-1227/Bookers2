@@ -53,6 +53,10 @@
           </td>
           <td><%= link_to @book.title, book_path %></td>
           <td><%= @book.body %></td>
+          <% if @book.user == current_user %>
+          <td><%= link_to 'Edit',books_path %></td>
+          <td><%= link_to 'Destroy', book_path(@book), method: :delete %></td>
+          <% end %>
         </tr>
       </tbody>
     </table>
