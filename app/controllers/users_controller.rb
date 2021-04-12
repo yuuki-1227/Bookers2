@@ -18,6 +18,10 @@ class UsersController < ApplicationController
     redirect_to book_path(@book)
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   private
 
   def book_params
