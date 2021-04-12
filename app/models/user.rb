@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   attachment :profile_image
 
+  validates :name, length: { minimum: 2}
+
   def books
     return Book.where(user_id: self.id)
   end
