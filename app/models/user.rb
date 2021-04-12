@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :books, dependent: :destroy
 
+  attachment :profile_image
 
   def books
     return Book.where(user_id: self.id)

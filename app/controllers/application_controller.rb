@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
     user_path(current_user)
   end
 
-  def after_update_path_for(resource)
-    user_path(current_user)
-  end
+  
+
+
 
   protected
 
