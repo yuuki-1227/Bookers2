@@ -21,11 +21,7 @@
         <td><%= @book.user.introduction %></td>
       </tr>
     </table>
-     <% if @book.user == current_user %>
       <%= link_to "edit_profile", edit_user_path(@book.user) %>
-    <% else %>
-      <%= link_to "edit_profile", user_path(current_user) %>
-    <% end %>
   </div>
   <div class = "New-book">
     <h3>New book</h3>
