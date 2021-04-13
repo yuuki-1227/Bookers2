@@ -1,7 +1,7 @@
-<div class = "container">
+<div class = "container px-5 px-sm-0">
   <div class = "row">
 
-<div class = "col-lg-4">
+<div class = "col-md-3">
   <div class = "User-information">
     <h3>User Info</h3>
     <%= attachment_image_tag current_user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div class = "col-lg-8">
+<div class = "col-md-8 offset-md-1">
   <div class = "books-index">
     <h3>Users</h3>
     <table class = "table table-striped">
