@@ -24,7 +24,7 @@
      <% if @user != current_user %>
       <%= link_to "edit_profile", user_path(current_user) %>
     <% else %>
-      <%= link_to "edit_profile", edit_user_registration_path %>
+      <%= link_to "edit_profile", edit_user_path(@book.user) %>
     <% end %>
   </div>
   <div class = "New-book">
