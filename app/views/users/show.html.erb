@@ -15,10 +15,10 @@
         <td><%= @user.introduction %></td>
       </tr>
     </table>
-    <% if @user != current_user %>
-      <%= link_to "edit_profile", user_path(current_user) %>
+    <% if @user == current_user %>
+      <%= link_to "edit_profile", edit_user_registration_path(@user.id) %>
     <% else %>
-      <%= link_to "edit_profile", edit_user_registration_path %>
+      <%= link_to "edit_profile", user_path(current_user) %>
     <% end %>
   </div>
   <div class = "New-book">
